@@ -13,17 +13,20 @@ import {
   docker,
   kubernetes,
   postgresql,
-  komikult,
-  leaderboard,
-  math,
-  movie,
-  nyeusi,
-  // space,
+  // komikult,
+  // leaderboard,
+  // math,
+  // movie,
+  // nyeusi,
   coverhunt,
   dcc,
   kelhel,
   microverse,
 } from "../assets";
+
+// Import ảnh dự án thật của bạn
+import danhoa from "../assets/projects/danhoabridal.jpeg";
+import courseWeb from "../assets/projects/Space_E-learning.jpeg";
 
 export const navLinks = [
   {
@@ -37,6 +40,10 @@ export const navLinks = [
   {
     id: "contact",
     title: "Contact",
+  },
+  {
+    id: "cv", // Thêm lại link CV nếu bạn muốn giữ nút điều hướng này
+    title: "CV / Resume",
   },
 ];
 
@@ -136,115 +143,49 @@ const experiences = [
 const projects = [
   {
     id: "project-1",
-    name: "KomiKult",
-    description: "A comic characters list app that displays Marvel characters.",
+    name: "Danhoa Bridal",
+    description:
+      "A real-world e-commerce website for bridal clothing deployed for a client. Built with NuxtJS & Vue.js for SEO optimization and high performance, integrated with Firebase. The site is currently live and stable.",
     tags: [
       {
-        name: "react",
+        name: "nuxtjs",
         color: "blue-text-gradient",
       },
       {
-        name: "mongodb",
+        name: "vuejs",
         color: "green-text-gradient",
       },
       {
-        name: "tailwind",
+        name: "firebase",
         color: "pink-text-gradient",
       },
     ],
-    image: komikult,
-    repo: "https://github.com/shaqdeff/KomiKult",
-    demo: "https://shaqdeff.github.io/KomiKult/",
+    image: danhoa, // Sử dụng biến ảnh đã import ở trên
+    source_code_link: "https://github.com/tranthuyngan2516", // Link GitHub của bạn
+    demo_link: "https://danhoabridal.com", // Link website thật
   },
   {
     id: "project-2",
-    name: "Leaderboard",
+    name: "E-Learning Platform",
     description:
-      "A leaderboard list app that displays scores submitted by different players.",
+      "An online platform for selling and managing programming courses. Allows instructors to upload content and students to track progress. Built with Java Servlet and pure HTML/CSS.",
     tags: [
       {
-        name: "react",
+        name: "java",
         color: "blue-text-gradient",
       },
       {
-        name: "restapi",
+        name: "servlet",
         color: "green-text-gradient",
       },
       {
-        name: "scss",
+        name: "html/css",
         color: "pink-text-gradient",
       },
     ],
-    image: leaderboard,
-    repo: "https://github.com/shaqdeff/Leaderboard",
-    demo: "https://shaqdeff.github.io/Leaderboard/",
-  },
-  {
-    id: "project-3",
-    name: "Math Magicians",
-    description: "This is a single-page calculator app built with React",
-    tags: [
-      {
-        name: "nextjs",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "supabase",
-        color: "green-text-gradient",
-      },
-      {
-        name: "css",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: math,
-    repo: "https://github.com/shaqdeff/Math-Magicians",
-    demo: "https://inspiring-medovik-37d3b3.netlify.app/",
-  },
-  {
-    id: "project-4",
-    name: "Movie Metro",
-    description: `A single-page application that allows users to search for any movie or show's ratings and its details.`,
-    tags: [
-      {
-        name: "nextjs",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "supabase",
-        color: "green-text-gradient",
-      },
-      {
-        name: "css",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: movie,
-    repo: "https://github.com/shaqdeff/Movie-Metro",
-    demo: "https://movie-metro.netlify.app/",
-  },
-  {
-    id: "project-5",
-    name: "Nyeusi Fest Site",
-    description:
-      "This is a demo concert website for a music festival called Nyeusi.",
-    tags: [
-      {
-        name: "nextjs",
-        color: "blue-text-gradient",
-      },
-      {
-        name: "supabase",
-        color: "green-text-gradient",
-      },
-      {
-        name: "css",
-        color: "pink-text-gradient",
-      },
-    ],
-    image: nyeusi,
-    repo: "https://github.com/shaqdeff/Nyeusi-Fest-Site",
-    demo: "https://shaqdeff.github.io/Nyeusi-Fest-Site/",
+    image: courseWeb,
+    source_code_link: "https://github.com/tranthuyngan2516",
+    demo_link: "https://space-e-learning.onrender.com",
   },
 ];
 

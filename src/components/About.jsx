@@ -1,24 +1,31 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { styles } from '../styles';
-import { services } from '../constants';
-import { fadeIn, textVariant } from '../utils/motion';
-import { SectionWrapper } from '../hoc';
+import React from "react";
+import { motion } from "framer-motion";
+import { services } from "../constants";
+import { fadeIn, textVariant } from "../utils/motion";
+import { SectionWrapper } from "../hoc";
 
 const ServiceCard = ({ index, title, icon }) => {
   return (
     <motion.div
-      variants={fadeIn('right', 'spring', 0.5 * index, 0.75)}
-      className="xs:w-[250px] w-full card-gradient p-[1px] rounded-[20px] shadow-card">
+      variants={fadeIn("right", "spring", 0.5 * index, 0.75)}
+      className="xs:w-[250px] w-full"
+    >
       <div
         options={{
           max: 45,
           scale: 1,
           speed: 450,
         }}
-        className="bg-jetLight rounded-[20px] py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col">
+        // --- CARD ĐEN ---
+        // bg-black: Nền card màu đen
+        // text-white: Chữ trong card màu trắng
+        // shadow-2xl: Bóng đổ sâu để card đen nổi lên trên nền trắng
+        className="bg-black rounded-[20px] py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col shadow-2xl transition-all duration-300 hover:-translate-y-2"
+      >
         <img src={icon} alt={title} className="w-16 h-16 object-contain" />
-        <h3 className="text-taupe text-[18px] font-bold text-center">
+
+        {/* Tiêu đề trong card màu trắng */}
+        <h3 className="text-white text-[20px] font-bold text-center font-poppins">
           {title}
         </h3>
       </div>
@@ -29,23 +36,29 @@ const ServiceCard = ({ index, title, icon }) => {
 const About = () => {
   return (
     <div className="-mt-[6rem]">
+      {/* Text bên ngoài giữ màu ĐEN để hiện trên nền trắng */}
       <motion.div variants={textVariant()}>
-        <p className={styles.sectionSubText}>Introduction</p>
-        <h2 className={styles.sectionHeadText}>Overview.</h2>
+        <p className="text-gray-500 text-sm uppercase tracking-widest font-poppins">
+          Introduction
+        </p>
+        <h2 className="text-black font-black md:text-[60px] sm:text-[50px] xs:text-[40px] text-[40px] mt-2">
+          Overview.
+        </h2>
       </motion.div>
 
       <motion.p
-        variants={fadeIn('', '', 0.1, 1)}
-        className="mt-4 text-taupe text-[18px] max-w-3xl leading-[30px]">
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis
-        sapiente ipsum dolorum dicta eaque cumque inventore molestias, beatae ea
-        quaerat alias accusamus voluptas autem! Alias odit voluptates in totam
-        vitae dignissimos minus eaque culpa unde tempore dolore aperiam
-        obcaecati voluptatum aliquam corrupti, suscipit accusamus! Odit unde
-        veniam dolorum ipsum doloribus.
+        variants={fadeIn("", "", 0.1, 1)}
+        // Nội dung mô tả màu xám đậm
+        className="mt-4 text-gray-700 text-[17px] max-w-3xl leading-[30px] font-poppins"
+      >
+        I'm a skilled software developer with experience in TypeScript and
+        JavaScript, and expertise in frameworks like React, Node.js, and
+        Three.js. I'm a quick learner and collaborate closely with clients to
+        create efficient, scalable, and user-friendly solutions that solve
+        real-world problems. Let's work together to bring your ideas to life!
       </motion.p>
 
-      <div className="mt-20 flex flex-wrap gap-10">
+      <div className="mt-20 flex flex-wrap gap-10 justify-center xl:justify-start">
         {services.map((service, index) => (
           <ServiceCard key={service.title} index={index} {...service} />
         ))}
@@ -54,4 +67,4 @@ const About = () => {
   );
 };
 
-export default SectionWrapper(About, 'about');
+export default SectionWrapper(About, "about");
