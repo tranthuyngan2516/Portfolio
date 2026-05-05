@@ -1,14 +1,15 @@
-// src/components/Navbar.jsx
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { styles } from "../styles";
 import { navLinks } from "../constants";
 import { close, menu, logo } from "../assets";
+import { useLanguage } from "../context/LanguageContext";
 
 const Navbar = () => {
   const [active, setActive] = useState("");
   const [toggle, setToggle] = useState(false);
   const location = useLocation();
+  const { lang, toggleLang } = useLanguage();
 
   const handleSectionClick = (title, sectionId) => {
     setActive(title);
@@ -42,48 +43,81 @@ const Navbar = () => {
             alt="logo"
             className="sm:w-[50px] sm:h-[50px] w-[45px] h-[45px] object-contain"
           />
-          <h1 className="text-black">Portfolio</h1>
+          <h1 className="text-black font-bold text-[18px]">Portfolio</h1>
         </Link>
 
         {/* Desktop Menu */}
-        <ul className="list-none hidden sm:flex flex-row gap-14 mt-2">
-          {navLinks.map((nav) => {
-            // --- SỬA Ở ĐÂY: Bỏ qua nếu là 'cv' để không bị trùng ---
-            if (nav.id === "cv") return null;
+        <div className="hidden sm:flex items-center gap-14 mt-2">
+          <ul className="list-none flex flex-row gap-14">
+            {navLinks.map((nav) => {
+              if (nav.id === "cv") return null;
 
-            return (
-              <li
-                key={nav.id}
-                className={`${
-                  active === nav.title ? "text-french" : "text-eerieBlack"
-                } hover:text-taupe text-[21px] font-medium font-mova uppercase tracking-[3px] cursor-pointer nav-links`}
-              >
-                <button
-                  onClick={() => handleSectionClick(nav.title, nav.id)}
-                  className="w-full text-left"
+              return (
+                <li
+                  key={nav.id}
+                  className={`${
+                    active === nav[lang] ? "text-french" : "text-eerieBlack"
+                  } hover:text-taupe text-[21px] font-medium font-mova uppercase tracking-[3px] cursor-pointer nav-links`}
                 >
-                  {nav.title}
-                </button>
-              </li>
-            );
-          })}
+                  <button
+                    onClick={() => handleSectionClick(nav[lang], nav.id)}
+                    className="w-full text-left"
+                  >
+                    {nav[lang]}
+                  </button>
+                </li>
+              );
+            })}
 
-          {/* Link CV Riêng (Giữ lại cái này để chuyển trang) */}
-          <li>
-            <Link
-              to="/cv"
-              className={`text-[21px] font-medium font-mova uppercase tracking-[3px]
-                bg-gradient-to-r from-french to-taupe bg-clip-text text-transparent
-                hover:text-french transition-all duration-300`}
-              onClick={() => setActive("CV")}
+            {/* Link CV Riêng */}
+            <li>
+              <Link
+                to="/cv"
+                className={`text-[21px] font-medium font-mova uppercase tracking-[3px]
+                  bg-gradient-to-r from-french to-taupe bg-clip-text text-transparent
+                  hover:text-french transition-all duration-300`}
+                onClick={() => setActive("CV")}
+              >
+                {lang === "en" ? "CV / Resume" : "CV / Hồ sơ"}
+              </Link>
+            </li>
+          </ul>
+
+          {/* Language Toggle Desktop */}
+          <div className="flex gap-2 bg-neutral-200 p-1 rounded-full border border-black/5">
+            <button
+              onClick={() => toggleLang("en")}
+              className={`px-3 py-1 rounded-full text-xs font-bold transition-all ${lang === "en" ? "bg-black text-white" : "text-black hover:bg-black/5"}`}
             >
-              CV / Resume
-            </Link>
-          </li>
-        </ul>
+              EN
+            </button>
+            <button
+              onClick={() => toggleLang("vi")}
+              className={`px-3 py-1 rounded-full text-xs font-bold transition-all ${lang === "vi" ? "bg-black text-white" : "text-black hover:bg-black/5"}`}
+            >
+              VN
+            </button>
+          </div>
+        </div>
 
         {/* Mobile Menu */}
-        <div className="sm:hidden flex flex-1 w-screen justify-end items-center">
+        <div className="sm:hidden flex flex-1 w-screen justify-end items-center gap-4">
+          {/* Language Toggle Mobile (Always visible) */}
+          <div className="flex gap-1 bg-neutral-200 p-1 rounded-full border border-black/5">
+            <button
+              onClick={() => toggleLang("en")}
+              className={`px-3 py-1 rounded-full text-[10px] font-bold transition-all ${lang === "en" ? "bg-black text-white" : "text-black"}`}
+            >
+              EN
+            </button>
+            <button
+              onClick={() => toggleLang("vi")}
+              className={`px-3 py-1 rounded-full text-[10px] font-bold transition-all ${lang === "vi" ? "bg-black text-white" : "text-black"}`}
+            >
+              VN
+            </button>
+          </div>
+
           {toggle ? (
             <div
               className={`p-6 bg-flashWhite opacity-[0.98] absolute top-0 left-0 w-screen h-[100vh] z-10 menu ${
@@ -101,21 +135,20 @@ const Navbar = () => {
 
               <ul className="list-none flex flex-col -gap-[1rem] items-start justify-end mt-[10rem] -ml-[35px]">
                 {navLinks.map((nav) => {
-                  // --- SỬA Ở ĐÂY: Bỏ qua 'cv' trong menu mobile luôn ---
                   if (nav.id === "cv") return null;
 
                   return (
                     <li
                       key={nav.id}
                       className={`${
-                        active === nav.title ? "text-french" : "text-eerieBlack"
+                        active === nav[lang] ? "text-french" : "text-eerieBlack"
                       } text-[88px] font-bold font-arenq uppercase tracking-[1px] cursor-pointer`}
                     >
                       <button
-                        onClick={() => handleSectionClick(nav.title, nav.id)}
+                        onClick={() => handleSectionClick(nav[lang], nav.id)}
                         className="w-full text-left"
                       >
-                        {nav.title}
+                        {nav[lang]}
                       </button>
                     </li>
                   );
@@ -130,7 +163,7 @@ const Navbar = () => {
                       setActive("CV");
                     }}
                   >
-                    CV / Resume
+                    {lang === "en" ? "CV" : "CV"}
                   </Link>
                 </li>
               </ul>

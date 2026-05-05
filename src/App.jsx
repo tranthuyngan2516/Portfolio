@@ -10,10 +10,12 @@ import {
   Projects,
   CV,
 } from "./components";
+import { LanguageProvider } from "./context/LanguageContext";
 
 const App = () => {
   return (
-    <BrowserRouter>
+    <LanguageProvider>
+      <BrowserRouter>
       <div className="relative z-0 bg-primary">
         <Navbar />
 
@@ -76,6 +78,7 @@ const App = () => {
         </Routes>
       </div>
     </BrowserRouter>
+  </LanguageProvider>
   );
 };
 

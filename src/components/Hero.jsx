@@ -1,16 +1,32 @@
 import { motion } from 'framer-motion';
 import { styles } from '../styles';
+import { useLanguage } from '../context/LanguageContext';
 
 const Hero = () => {
+  const { lang } = useLanguage();
+
+  const t = {
+    en: {
+      greeting: "Hi, I'm",
+      role: "A passionate Backend Developer specializing in building secure, scalable systems with Java, Spring Boot & SQL.",
+      viewProjects: "View Projects",
+      contactMe: "Contact Me",
+    },
+    vi: {
+      greeting: "Xin chào, mình là",
+      role: "Một Backend Developer đầy đam mê, chuyên xây dựng các hệ thống an toàn và có khả năng mở rộng với Java, Spring Boot & SQL.",
+      viewProjects: "Xem Dự án",
+      contactMe: "Liên hệ",
+    }
+  };
+
+  const content = t[lang];
+
   return (
     <section className="relative w-full h-screen mx-auto overflow-hidden flex flex-col justify-center items-center">
-
-      {/* 1. BACKGROUND: Hiệu ứng Spotlight Xám & Grid */}
+      {/* ... keep background as is ... */}
       <div className="absolute inset-0 z-0">
-        {/* Spotlight: Thay vì đen xì, dùng màu Xám Đậm (neutral-900) tỏa ra */}
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-neutral-800 via-black to-black"></div>
-
-        {/* Grid Pattern: Lưới mờ màu trắng tạo chiều sâu công nghệ */}
         <div className="absolute inset-0"
              style={{
                backgroundImage: 'linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px)',
@@ -19,23 +35,18 @@ const Hero = () => {
         </div>
       </div>
 
-      {/* 2. MAIN CONTENT */}
       <div className="relative z-10 max-w-7xl mx-auto px-6 text-center">
-
-        {/* Lời chào */}
         <motion.div
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          {/* Tên dùng màu trắng hoàn toàn, font đậm */}
           <h1 className={`${styles.heroHeadText} text-neutral-400 font-poppins`}>
-            Hi, I'm <br className="sm:hidden" />
+            {content.greeting} <br className="sm:hidden" />
             <span className="text-white font-black tracking-wider">Thuy Ngan</span>
           </h1>
         </motion.div>
 
-        {/* Mô tả vai trò & Kỹ năng (Java Spring Boot) */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -43,34 +54,28 @@ const Hero = () => {
           className="mt-6"
         >
           <p className={`${styles.heroSubText} mt-2 text-neutral-300 max-w-3xl mx-auto leading-relaxed`}>
-            A passionate <span className="text-white font-bold border-b border-white/50">Backend Developer</span> specializing in building
-            secure, scalable systems with <br className="hidden sm:block" />
-            {/* Highlight bằng màu trắng sáng */}
-            <span className="text-white font-bold">Java, Spring Boot</span> & <span className="text-white font-bold">SQL</span>.
+            {content.role}
           </p>
         </motion.div>
 
-        {/* Nút điều hướng: Trắng Đen tương phản cao */}
         <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.5, delay: 0.8 }}
-            className="mt-10 flex flex-col sm:flex-row gap-4 justify-center"
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.5, delay: 0.8 }}
+          className="mt-10 flex flex-col sm:flex-row gap-4 justify-center"
         >
-            {/* Nút chính: Nền Trắng - Chữ Đen (Rất nổi bật trên nền tối) */}
             <a
               href="#projects"
               className="px-8 py-3 bg-white text-black font-bold rounded-full hover:bg-neutral-200 transition-all shadow-[0_0_20px_rgba(255,255,255,0.3)]"
             >
-              View Projects
+              {content.viewProjects}
             </a>
 
-            {/* Nút phụ: Trong suốt - Viền Trắng */}
             <a
               href="#contact"
               className="px-8 py-3 bg-transparent border border-white/30 text-white font-bold rounded-full hover:bg-white/10 hover:border-white transition-all"
             >
-              Contact Me
+              {content.contactMe}
             </a>
         </motion.div>
       </div>

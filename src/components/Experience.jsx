@@ -7,10 +7,11 @@ import 'react-vertical-timeline-component/style.min.css';
 import { styles } from '../styles';
 import { experiences } from '../constants';
 import { SectionWrapper } from '../hoc';
-import { download, downloadHover, resume } from '../assets';
+import { download, resume } from '../assets';
 import { textVariant } from '../utils/motion';
+import { useLanguage } from '../context/LanguageContext';
 
-const ExperienceCard = ({ experience }) => (
+const ExperienceCard = ({ experience, lang }) => (
   <VerticalTimelineElement
     contentStyle={{
       background: '#eaeaec',
@@ -24,7 +25,7 @@ const ExperienceCard = ({ experience }) => (
     date={
       <div>
         <h3 className="text-dim text-[18px] font-bold font-beckman">
-          {experience.date}
+          {experience.date[lang]}
         </h3>
       </div>
     }
@@ -33,40 +34,59 @@ const ExperienceCard = ({ experience }) => (
       <div className="flex justify-center items-center w-full h-full">
         <img
           src={experience.icon}
-          alt={experience.company_name}
+          alt={experience[lang].company_name}
           className="w-[60%] h-[60%] object-contain"
         />
       </div>
     }>
     <div>
       <h3 className="text-jetLight text-[24px] font-bold font-beckman tracking-[2px]">
-        {experience.title}
+        {experience[lang].title}
       </h3>
       <p
         className="text-taupe text-[22px] font-semibold font-overcameBold tracking-[1px]"
         style={{ margin: 0 }}>
-        {experience.company_name}
+        {experience[lang].company_name}
       </p>
     </div>
   </VerticalTimelineElement>
 );
 
 const Experience = () => {
+  const { lang } = useLanguage();
+
+  const t = {
+    en: {
+      subTitle: "What I've done so far",
+      title: "Work Experience.",
+      resumeBtn: "MY RESUME",
+      cvFile: "/cv/NganTran_CV_EN.pdf",
+    },
+    vi: {
+      subTitle: "Những gì tôi đã làm",
+      title: "Kinh nghiệm làm việc.",
+      resumeBtn: "XEM HỒ SƠ",
+      cvFile: "/cv/NganTran_CV_VN.pdf",
+    }
+  };
+
+  const content = t[lang];
+
   return (
     <>
       <motion.div variants={textVariant()}>
         <p className={`${styles.sectionSubText} sm:pl-16 pl-[2rem]`}>
-          What I've done so far
+          {content.subTitle}
         </p>
         <h2 className={`${styles.sectionHeadText} sm:pl-16 pl-[2rem]`}>
-          Work Experience.
+          {content.title}
         </h2>
       </motion.div>
 
       <div className="mt-20 flex flex-col">
         <VerticalTimeline className="vertical-timeline-custom-line">
           {experiences.map((experience, index) => (
-            <ExperienceCard key={index} experience={experience} />
+            <ExperienceCard key={index} experience={experience} lang={lang} />
           ))}
           <VerticalTimelineElement
             contentStyle={{
@@ -100,28 +120,14 @@ const Experience = () => {
               sm:mt-[22px] mt-[16px] hover:bg-battleGray 
               hover:text-eerieBlack transition duration-[0.2s] 
               ease-in-out"
-              onClick={() =>
-                window.open(
-                  'resume link', //paste the link to your resume here
-                  '_blank'
-                )
-              }
-              onMouseOver={() => {
-                document
-                  .querySelector('.download-btn')
-                  .setAttribute('src', downloadHover);
-              }}
-              onMouseOut={() => {
-                document
-                  .querySelector('.download-btn')
-                  .setAttribute('src', download);
-              }}>
-              MY RESUME
+              onClick={() => window.open(content.cvFile, '_blank')}
+            >
+              {content.resumeBtn}
               <img
                 src={download}
                 alt="download"
                 className="download-btn sm:w-[26px] sm:h-[26px] 
-                w-[23px] h-[23px] object-contain"
+                w-[23px] h-[23px] object-contain ml-2"
               />
             </button>
           </VerticalTimelineElement>
