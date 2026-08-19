@@ -8,13 +8,13 @@ const Hero = () => {
   const t = {
     en: {
       greeting: "Hi, I'm",
-      role: "A passionate Backend Developer specializing in building secure, scalable systems with Java, Spring Boot & SQL.",
+      role: "A passionate Full-Stack Developer specializing in Java Spring Boot, NestJS & building secure, scalable enterprise systems.",
       viewProjects: "View Projects",
       contactMe: "Contact Me",
     },
     vi: {
       greeting: "Xin chào, mình là",
-      role: "Một Backend Developer đầy đam mê, chuyên xây dựng các hệ thống an toàn và có khả năng mở rộng với Java, Spring Boot & SQL.",
+      role: "Một Full-Stack Developer đầy đam mê, chuyên xây dựng các hệ thống doanh nghiệp an toàn và có khả năng mở rộng với Java Spring Boot & NestJS.",
       viewProjects: "Xem Dự án",
       contactMe: "Liên hệ",
     }

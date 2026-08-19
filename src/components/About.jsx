@@ -30,12 +30,12 @@ const About = () => {
     en: {
       subTitle: "Introduction",
       title: "Overview.",
-      description: "I'm a dedicated software developer specializing in building secure, scalable backend systems with Java and Spring Boot. With experience in modern frontend frameworks like NuxtJS and Vue.js, I bridge the gap between robust server-side logic and intuitive user interfaces. I'm a continuous learner currently expanding my expertise in cloud-native technologies like Docker and Kubernetes to deliver high-performance, real-world solutions. Let's build something great together!",
+      description: "I'm a Full-Stack Developer based in Can Tho, currently interning at Mobifone Digital Solution Business Center. I specialize in building secure, scalable enterprise systems with Java Spring Boot and NestJS, working full-cycle (analysis, design, development, testing, delivery) in Scrum environments. With hands-on experience in database design, RESTful APIs, and deployment on Linux VPS with Docker, I love turning complex business requirements into reliable real-world solutions. Let's build something great together!",
     },
     vi: {
       subTitle: "Giới thiệu",
       title: "Tổng quan.",
-      description: "Tôi là một nhà phát triển phần mềm tận tâm, chuyên xây dựng các hệ thống backend an toàn và có khả năng mở rộng bằng Java và Spring Boot. Với kinh nghiệm về các framework frontend hiện đại như NuxtJS và Vue.js, tôi kết nối logic máy chủ mạnh mẽ với giao diện người dùng trực quan. Tôi không ngừng học hỏi và hiện đang mở rộng chuyên môn sang các công nghệ cloud-native như Docker và Kubernetes để cung cấp các giải pháp hiệu suất cao trong thực tế. Hãy cùng nhau xây dựng những điều tuyệt vời!",
+      description: "Tôi là một Full-Stack Developer tại Cần Thơ, hiện đang thực tập tại Trung tâm Kinh doanh Giải pháp số - Mobifone. Tôi chuyên xây dựng các hệ thống doanh nghiệp an toàn và có khả năng mở rộng với Java Spring Boot và NestJS, tham gia trọn vòng đời dự án (phân tích, thiết kế, phát triển, kiểm thử, bàn giao) theo quy trình Scrum. Với kinh nghiệm thực tế về thiết kế CSDL, RESTful API và triển khai trên Linux VPS với Docker, tôi luôn đam mê biến các yêu cầu nghiệp vụ phức tạp thành giải pháp đáng tin cậy. Hãy cùng nhau xây dựng những điều tuyệt vời!",
     }
   };
 

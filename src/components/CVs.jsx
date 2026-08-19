@@ -20,7 +20,7 @@ const CV = () => {
       title: "Curriculum Vitae.",
       openToWork: "Open to Work",
       summaryTitle: "Profile Summary",
-      summary: "Dedicated Software Developer with expertise in building secure, scalable systems using Java Spring Boot, NestJS, and Nuxt.js. Proven track record in delivering high-impact projects, from AI-powered recruitment systems to real-time observability platforms. Specialized in Backend architecture, API design, and Database optimization. Passionate about applying modern DevOps practices (Docker, Kubernetes) and AI integration to solve complex business problems.",
+      summary: "Full-Stack Developer pursuing a career focused on Java Spring Boot and NestJS, building RESTful APIs and business logic. Solid foundation in database design (MySQL, SQL Server) and hands-on experience with enterprise systems through 3 projects at Mobifone in a Scrum environment. Eager to grow in a corporate setting, optimizing and operating production systems, and contributing to the full project lifecycle from design to deployment.",
       expTitle: "Key Projects & Experience",
       eduTitle: "Education",
       skillsTitle: "Technical Skills",
@@ -28,10 +28,10 @@ const CV = () => {
       view: "View CV (PDF)",
       back: "Back to Portfolio",
       cvFile: "/cv/NganTran_CV_EN.pdf",
-      role: "Freelance Software Developer",
+      role: "Full-Stack Developer | Mobifone Intern",
       projectRole1: "Core Backend / Architect",
-      projectRole2: "Full Stack Developer",
-      projectRole3: "AI Backend Developer",
+      projectRole2: "Full-Stack Developer",
+      projectRole3: "Backend Developer",
       projectRole4: "Freelance Developer",
       p1Desc: [
         "Built an Event-Driven Architecture capturing telemetry data without adding latency to monitored APIs.",
@@ -39,22 +39,22 @@ const CV = () => {
         "Developed complex aggregation logic for engineering metrics like P95/P99 latency and error tracking.",
       ],
       p2Desc: [
-        "Digitized end-to-end budget management, contract lifecycle, and expense approval workflows.",
-        "Integrated PulseOps Telemetry for deep visibility into API performance and error diagnostics.",
-        "Implemented secure multi-level RBAC and JWT-based authentication.",
+        "Secured financial APIs with JWT middleware and detailed RBAC role-based permissions.",
+        "Wrote safe budget-allocation logic for concurrent transactions, avoiding data inconsistency.",
+        "Deployed the whole system on a Linux VPS with Docker for WEB AI HACKATHON 2026.",
       ],
       p3Desc: [
-        "Integrated Google Gemini AI to automatically extract and analyze candidate data from PDF resumes.",
-        "Automated interview scheduling and email notifications for candidates and recruiters.",
-        "Designed a robust recruitment plan and posting management module using Java 21.",
+        "Designed a standardized SQL Server schema for high-volume candidate records.",
+        "Implemented the full pipeline from job posting and application intake to automatic status updates via validated RESTful APIs.",
       ],
       p4Desc: [
-        "Designed and deployed a live bridal clothing sales website using NuxtJS and Firebase.",
-        "Optimized for SEO and performance, ensuring a stable shopping experience for real customers.",
+        "Modeled a multi-attribute product system (size, color, stock variants) with inventory tracking.",
+        "Integrated Firebase Storage for media and Nuxt.js SSR to improve catalog page load speed.",
       ],
       eduDetail: [
         "Focus on Java, Web Development, and Database Design.",
-        "Participated in various hackathons and technical projects.",
+        "Participated in hackathons and technical projects, including WEB AI HACKATHON 2026.",
+        "English: TOEIC 630, reads technical documentation fluently.",
       ],
     },
     vi: {
@@ -62,7 +62,7 @@ const CV = () => {
       title: "Sơ yếu lý lịch.",
       openToWork: "Sẵn sàng làm việc",
       summaryTitle: "Tóm tắt chuyên môn",
-      summary: "Nhà phát triển phần mềm tận tâm với chuyên môn xây dựng các hệ thống an toàn và có khả năng mở rộng bằng Java Spring Boot, NestJS và Nuxt.js. Đã có kinh nghiệm thực tế trong việc triển khai các dự án có tác động lớn, từ hệ thống tuyển dụng tích hợp AI đến các nền tảng giám sát thời gian thực. Chuyên sâu về kiến trúc Backend, thiết kế API và tối ưu hóa cơ sở dữ liệu. Đam mê áp dụng các thực hành DevOps hiện đại (Docker, Kubernetes) và tích hợp AI để giải quyết các vấn đề kinh doanh phức tạp.",
+      summary: "Lập trình viên Full-Stack với định hướng phát triển theo Java Spring Boot và NestJS, tập trung xây dựng RESTful API và xử lý logic nghiệp vụ. Có nền tảng về thiết kế CSDL (MySQL, SQL Server) và kinh nghiệm làm việc với hệ thống doanh nghiệp qua 3 dự án tại Mobifone cùng môi trường Scrum. Mong muốn tham gia môi trường doanh nghiệp để nâng cao kỹ năng thực tế, tối ưu và vận hành hệ thống ở môi trường production, đóng góp trọn vòng đời từ thiết kế đến triển khai dự án.",
       expTitle: "Dự án tiêu biểu & Kinh nghiệm",
       eduTitle: "Học vấn",
       skillsTitle: "Kỹ năng chuyên môn",
@@ -70,10 +70,10 @@ const CV = () => {
       view: "Xem CV (PDF)",
       back: "Quay lại Portfolio",
       cvFile: "/cv/NganTran_CV_VN.pdf",
-      role: "Lập trình viên Freelance",
+      role: "Lập trình viên Full-Stack | Thực tập sinh Mobifone",
       projectRole1: "Backend Developer",
-      projectRole2: "Full Stack Developer",
-      projectRole3: "AI Backend Developer",
+      projectRole2: "Lập trình viên Full-Stack",
+      projectRole3: "Backend Developer",
       projectRole4: "Freelance Developer",
       p1Desc: [
         "Xây dựng kiến trúc Event-Driven giúp thu thập dữ liệu telemetry mà không làm tăng độ trễ cho các API được giám sát.",
@@ -81,22 +81,22 @@ const CV = () => {
         "Phát triển logic tổng hợp phức tạp cho các chỉ số kỹ thuật như độ trễ P95/P99 và theo dõi lỗi.",
       ],
       p2Desc: [
-        "Số hóa quy trình quản lý ngân sách, vòng đời hợp đồng và quy trình phê duyệt chi phí từ đầu đến cuối.",
-        "Tích hợp PulseOps Telemetry để quan sát sâu hiệu năng API và chẩn đoán lỗi.",
-        "Triển khai phân quyền đa cấp (RBAC) an toàn và xác thực dựa trên JWT.",
+        "Bảo mật API tài chính bằng middleware JWT và phân quyền RBAC chi tiết theo nhiều vai trò.",
+        "Viết logic phân bổ ngân sách an toàn cho giao dịch đồng thời, tránh sai lệch dữ liệu.",
+        "Triển khai toàn bộ hệ thống trên Linux VPS với Docker cho cuộc thi WEB AI HACKATHON 2026.",
       ],
       p3Desc: [
-        "Tích hợp Google Gemini AI để tự động trích xuất và phân tích dữ liệu ứng viên từ hồ sơ PDF.",
-        "Tự động hóa việc đặt lịch phỏng vấn và thông báo email cho ứng viên và nhà tuyển dụng.",
-        "Thiết kế kế hoạch tuyển dụng và mô-đun quản lý bài đăng bằng Java 21.",
+        "Thiết kế lược đồ SQL Server chuẩn hóa cho hồ sơ ứng viên khối lượng lớn.",
+        "Triển khai trọn quy trình từ đăng tin tuyển dụng, nhận hồ sơ đến tự động cập nhật trạng thái bằng API RESTful có validation.",
       ],
       p4Desc: [
-        "Thiết kế và triển khai website bán váy cưới thực tế bằng NuxtJS và Firebase.",
-        "Tối ưu hóa SEO và hiệu năng, đảm bảo trải nghiệm mua sắm ổn định cho khách hàng.",
+        "Mô hình hóa hệ thống sản phẩm đa thuộc tính (biến thể theo size, color và tồn kho) kèm theo dõi tồn kho.",
+        "Tích hợp Firebase Storage lưu media và Nuxt.js SSR cải thiện tốc độ tải trang danh mục.",
       ],
       eduDetail: [
         "Tập trung vào Java, Phát triển Web và Thiết kế Cơ sở dữ liệu.",
-        "Tham gia nhiều cuộc thi hackathon và các dự án kỹ thuật.",
+        "Tham gia các cuộc thi hackathon và dự án kỹ thuật, trong đó có WEB AI HACKATHON 2026.",
+        "Tiếng Anh: TOEIC 630, đọc tốt tài liệu kỹ thuật.",
       ],
     }
   };
@@ -125,10 +125,10 @@ const CV = () => {
           <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-6">
             <div>
               <h3 className="text-white text-4xl font-bold tracking-wide">
-                Trần Thị Thuý Ngân (thuyngan.tran)
+                Trần Thị Thuý Ngân
               </h3>
               <p className="text-neutral-400 mt-2 text-lg">
-                {content.role}
+                {content.role} · {lang === 'en' ? 'Can Tho, Vietnam' : 'Cần Thơ, Việt Nam'}
               </p>
             </div>
             <span className="text-white border border-white/20 bg-neutral-900 px-4 py-1 rounded-full text-sm mt-4 md:mt-0">
@@ -234,13 +234,26 @@ const CV = () => {
           className={cardStyle}
         >
           <h3 className="text-white text-2xl font-bold mb-4 border-b border-white/10 pb-2 inline-block">
-            Profile Summary
+            {content.summaryTitle}
           </h3>
           <p className="text-neutral-300 leading-relaxed text-lg">
-            Dedicated Software Developer with expertise in building secure,
-            scalable systems using <span className="text-white">Java Spring Boot, NestJS, and Nuxt.js</span>.
-            Proven track record in delivering high-impact projects, from AI-powered recruitment systems to real-time observability platforms.
-            Specialized in Backend architecture, API design, and Database optimization. Passionate about applying modern DevOps practices (Docker, Kubernetes) and AI integration to solve complex business problems.
+            {lang === 'en' ? (
+              <>
+                Full-Stack Developer pursuing a career focused on
+                <span className="text-white"> Java Spring Boot and NestJS</span>, building RESTful APIs and business logic. Solid foundation in
+                database design (<span className="text-white">MySQL, SQL Server</span>) and hands-on experience with enterprise systems through
+                <span className="text-white"> 3 projects at Mobifone</span> in a Scrum environment. Eager to grow in a corporate setting,
+                optimizing and operating production systems, and contributing to the full project lifecycle from design to deployment.
+              </>
+            ) : (
+              <>
+                Lập trình viên Full-Stack với định hướng phát triển theo
+                <span className="text-white"> Java Spring Boot và NestJS</span>, tập trung xây dựng RESTful API và xử lý logic nghiệp vụ. Có nền tảng vững về
+                thiết kế CSDL (<span className="text-white">MySQL, SQL Server</span>) và kinh nghiệm thực tế với hệ thống doanh nghiệp qua
+                <span className="text-white"> 3 dự án tại Mobifone</span> trong môi trường Scrum. Mong muốn phát triển trong môi trường doanh nghiệp,
+                tối ưu và vận hành hệ thống production, đóng góp trọn vòng đời dự án từ thiết kế đến triển khai.
+              </>
+            )}
           </p>
         </motion.div>
 
@@ -248,7 +261,7 @@ const CV = () => {
         <motion.div variants={fadeIn("up", "spring", 0.3, 1)}>
           <h3 className="text-white text-3xl font-bold mb-8 flex items-center gap-3">
             <span className="w-2 h-8 bg-white rounded-full"></span>
-            Key Projects & Experience
+            {content.expTitle}
           </h3>
 
           <div className={cardStyle}>
@@ -260,15 +273,14 @@ const CV = () => {
                     🛰️ API Observatory (PulseOps)
                   </h5>
                   <p className="text-neutral-400 font-medium bg-neutral-900 px-3 py-1 rounded-lg w-fit">
-                    Core Backend / Architect
+                    {content.projectRole1}
                   </p>
                 </div>
                 <p className="text-neutral-400 mb-4 italic">Real-time API Monitoring, Debugging, and Operational Intelligence Platform.</p>
                 <ul className="text-neutral-300 list-disc list-inside space-y-2 marker:text-white">
-                  <li>Built an <strong>Event-Driven Architecture</strong> capturing telemetry data without adding latency to monitored APIs.</li>
-                  <li>Implemented <strong>WebSocket Gateway</strong> for live request streaming and <strong>BullMQ/Redis</strong> for reliable ingestion.</li>
-                  <li>Developed complex aggregation logic for engineering metrics like <strong>P95/P99 latency</strong> and error tracking.</li>
-                  <li>Tech stack: <span className="text-white">NestJS, BullMQ, Redis, Prisma 7, PostgreSQL, Docker, WebSockets</span>.</li>
+                  {content.p1Desc.map((item, i) => (
+                    <li key={i}>{item}</li>
+                  ))}
                 </ul>
               </div>
 
@@ -276,18 +288,17 @@ const CV = () => {
               <div>
                 <div className="flex flex-col md:flex-row justify-between mb-2">
                   <h5 className="text-white text-xl font-bold">
-                    💰 Hackathon Revenue & Expenditure Management
+                    💰 TechCore: Financial Management
                   </h5>
                   <p className="text-neutral-400 font-medium bg-neutral-900 px-3 py-1 rounded-lg w-fit">
-                    Full Stack Developer
+                    {content.projectRole2}
                   </p>
                 </div>
-                <p className="text-neutral-400 mb-4 italic">Comprehensive corporate financial management system with integrated observability.</p>
+                <p className="text-neutral-400 mb-4 italic">Enterprise finance management system with RBAC, JWT-secured APIs and Docker/VPS deployment.</p>
                 <ul className="text-neutral-300 list-disc list-inside space-y-2 marker:text-white">
-                  <li>Digitized end-to-end budget management, contract lifecycle, and expense approval workflows.</li>
-                  <li>Integrated <strong>PulseOps Telemetry</strong> for deep visibility into API performance and error diagnostics.</li>
-                  <li>Implemented secure multi-level RBAC and <strong>JWT-based authentication</strong>.</li>
-                  <li>Tech stack: <span className="text-white">Java Spring Boot 3, Nuxt 3, Pinia, SQL Server, JWT, PulseOps</span>.</li>
+                  {content.p2Desc.map((item, i) => (
+                    <li key={i}>{item}</li>
+                  ))}
                 </ul>
               </div>
 
@@ -295,18 +306,17 @@ const CV = () => {
               <div>
                 <div className="flex flex-col md:flex-row justify-between mb-2">
                   <h5 className="text-white text-xl font-bold">
-                    🚀 TechCore Recruitment Management System
+                    🚀 TechCore: Recruitment & HR Management
                   </h5>
                   <p className="text-neutral-400 font-medium bg-neutral-900 px-3 py-1 rounded-lg w-fit">
-                    AI Backend Developer
+                    {content.projectRole3}
                   </p>
                 </div>
-                <p className="text-neutral-400 mb-4 italic">AI-powered recruitment platform with automated CV screening.</p>
+                <p className="text-neutral-400 mb-4 italic">Recruitment and personnel management system covering the full hiring pipeline.</p>
                 <ul className="text-neutral-300 list-disc list-inside space-y-2 marker:text-white">
-                  <li>Integrated <strong>Google Gemini AI</strong> to automatically extract and analyze candidate data from PDF resumes.</li>
-                  <li>Automated interview scheduling and email notifications for candidates and recruiters.</li>
-                  <li>Designed a robust recruitment plan and posting management module using <strong>Java 21</strong>.</li>
-                  <li>Tech stack: <span className="text-white">Java 21, Spring Boot 4, SQL Server, Gemini AI, Thymeleaf, Bootstrap 5</span>.</li>
+                  {content.p3Desc.map((item, i) => (
+                    <li key={i}>{item}</li>
+                  ))}
                 </ul>
               </div>
 
@@ -314,15 +324,16 @@ const CV = () => {
               <div>
                 <div className="flex flex-col md:flex-row justify-between mb-2">
                   <h5 className="text-white text-xl font-bold">
-                    👗 DanhoaBridal.com (E-commerce)
+                    👗 DanhoaBridal (Production Backend)
                   </h5>
                   <p className="text-neutral-400 font-medium bg-neutral-900 px-3 py-1 rounded-lg w-fit">
-                    Freelance Developer
+                    {content.projectRole4}
                   </p>
                 </div>
                 <ul className="text-neutral-300 list-disc list-inside space-y-2 marker:text-white">
-                  <li>Designed and deployed a live bridal clothing sales website using <strong>NuxtJS and Firebase</strong>.</li>
-                  <li>Optimized for SEO and performance, ensuring a stable shopping experience for real customers.</li>
+                  {content.p4Desc.map((item, i) => (
+                    <li key={i}>{item}</li>
+                  ))}
                 </ul>
               </div>
             </div>
@@ -336,25 +347,26 @@ const CV = () => {
         >
           <h3 className="text-white text-3xl font-bold mb-6 flex items-center gap-3">
             <span className="w-2 h-8 bg-white rounded-full"></span>
-            Education
+            {content.eduTitle}
           </h3>
 
           <div className="flex flex-col md:flex-row justify-between items-start">
             <div>
               <h4 className="text-white text-xl font-bold">
-                FPT Polytechnic College
+                FPT Polytechnic Can Tho College
               </h4>
               <p className="text-neutral-300 mt-1">
-                Major: Software Development
+                Major: Software Development (Phát triển Phần mềm)
               </p>
               <ul className="text-neutral-400 mt-4 list-disc list-inside space-y-1">
-                <li>Focus on Java, Web Development, and Database Design.</li>
-                <li>Participated in various hackathons and technical projects.</li>
+                {content.eduDetail.map((item, i) => (
+                  <li key={i}>{item}</li>
+                ))}
               </ul>
             </div>
             <div className="text-right">
-              <p className="text-neutral-400 font-medium bg-neutral-900 px-3 py-1 rounded-lg inline-block">
-                Expected: 06/2026
+                <p className="text-neutral-400 font-medium bg-neutral-900 px-3 py-1 rounded-lg inline-block">
+                Aug 2024 - Present
               </p>
             </div>
           </div>
@@ -364,7 +376,7 @@ const CV = () => {
         <motion.div variants={fadeIn("up", "spring", 0.5, 1)}>
           <h3 className="text-white text-3xl font-bold mb-8 flex items-center gap-3">
             <span className="w-2 h-8 bg-white rounded-full"></span>
-            Technical Skills
+            {content.skillsTitle}
           </h3>
 
           <div className="flex flex-col gap-4">
@@ -376,16 +388,15 @@ const CV = () => {
               <div className="flex flex-wrap gap-3">
                 {[
                   "Java 17/21",
-                  "Spring Boot 3/4",
+                  "Spring Boot",
+                  "Spring Security",
+                  "Spring Data JPA",
                   "NestJS",
                   "Node.js",
+                  "TypeScript",
+                  "MySQL",
                   "SQL Server",
-                  "PostgreSQL",
-                  "Redis",
-                  "Prisma ORM",
-                  "BullMQ",
                   "RESTful APIs",
-                  "WebSockets",
                 ].map((skill) => (
                   <span
                     key={skill}
@@ -404,16 +415,19 @@ const CV = () => {
               </p>
               <div className="flex flex-wrap gap-3">
                 {[
-                  "Nuxt 3",
+                  "NuxtJS",
+                  "ReactJS",
                   "Vue.js",
-                  "React.js",
+                  "Ant Design",
                   "Tailwind CSS",
-                  "TypeScript",
+                  "Bootstrap",
+                  "TypeORM",
+                  "JWT / RBAC / OAuth2",
                   "Docker",
-                  "Kubernetes",
-                  "Git / GitHub",
-                  "Google Gemini AI",
                   "Firebase",
+                  "Git / GitLab",
+                  "Linux VPS",
+                  "WEBGIS",
                 ].map((skill) => (
                   <span
                     key={skill}

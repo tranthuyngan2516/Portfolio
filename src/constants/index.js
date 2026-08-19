@@ -13,6 +13,7 @@ import {
   docker,
   postgresql,
   nodejs,
+  reactjs,
   danhoa,
   courseWeb,
   pulseops,
@@ -29,24 +30,24 @@ export const navLinks = [
 
 const services = [
   {
-    en: "Java Backend Developer",
-    vi: "Lập trình viên Java Backend",
+    en: "Java Spring Boot Backend",
+    vi: "Backend Java Spring Boot",
     icon: backend,
   },
   {
-    en: "Frontend Developer (Vue/Nuxt)",
-    vi: "Lập trình viên Frontend (Vue/Nuxt)",
-    icon: frontend,
+    en: "NestJS & Node.js Backend",
+    vi: "Backend NestJS & Node.js",
+    icon: nodejs,
   },
   {
-    en: "Database Management",
-    vi: "Quản trị Cơ sở dữ liệu",
+    en: "Database Design (MySQL, SQL Server)",
+    vi: "Thiết kế CSDL (MySQL, SQL Server)",
     icon: prototyping,
   },
   {
-    en: "AI Integration & Monitoring",
-    vi: "Tích hợp AI & Giám sát hệ thống",
-    icon: ux,
+    en: "Full-Stack Development (Scrum)",
+    vi: "Phát triển Full-Stack (Scrum)",
+    icon: frontend,
   },
 ];
 
@@ -55,53 +56,88 @@ const technologies = [
   { name: "Node.js", icon: nodejs },
   { name: "TypeScript", icon: typescript },
   { name: "JavaScript", icon: javascript },
-  { name: "PostgreSQL", icon: postgresql },
+  { name: "ReactJS", icon: reactjs },
   { name: "Tailwind CSS", icon: tailwind },
   { name: "HTML 5", icon: html },
   { name: "CSS 3", icon: css },
   { name: "Git", icon: git },
   { name: "Docker", icon: docker },
+  { name: "PostgreSQL", icon: postgresql },
 ];
 
 const experiences = [
   {
     en: {
-      title: "Freelance Software Developer",
-      company_name: "Self-employed / Client Projects",
+      title: "Full-Stack Developer Intern",
+      company_name: "Mobifone Digital Solution Business Center",
+      description: [
+        "Joined 3 enterprise web projects from day one, owning features full-cycle: requirement analysis, design, module/API development, testing and handover, working in Scrum (daily standups, weekly progress meetings).",
+        "Built around 10 modules from scratch (Controller, Service, Repository, Entity) with NestJS, TypeScript, MySQL and TypeORM; accumulated 150+ commits on shared GitLab repositories.",
+        "Took over and stabilized the WEBGIS & Industrial Zone Management system (KCN/KCX Can Tho): fixed 10+ production bugs and developed 2 new modules.",
+        "Developed 2 modules (initiative domain & initiative type management) for the People's Committee's Initiative Management System, with full CRUD APIs and validation, self-tested before QA handover.",
+        "Acted as project tester: wrote 15-50 test cases per project, testing features directly on near-production environments across 10-15 screens per project.",
+      ],
     },
     vi: {
-      title: "Lập trình viên Freelance",
-      company_name: "Tự doanh / Dự án Khách hàng",
+      title: "Thực tập sinh Lập trình viên Full-Stack",
+      company_name: "Trung tâm Kinh doanh Giải pháp số - Mobifone",
+      description: [
+        "Tham gia 3 dự án web doanh nghiệp ngay từ đầu, sở hữu tính năng trọn vòng đời: phân tích yêu cầu, thiết kế, phát triển module/API, kiểm thử và bàn giao, theo quy trình Scrum.",
+        "Xây dựng khoảng 10 module từ đầu (Controller, Service, Repository, Entity) bằng NestJS, TypeScript, MySQL và TypeORM; hơn 150 commits trên các repository GitLab chung.",
+        "Tiếp nhận và ổn định hệ thống WEBGIS và Quản lý khu công nghiệp (KCN/KCX Cần Thơ), xử lý hơn 10 lỗi trên production và phát triển thêm 2 module mới.",
+        "Phát triển 2 module cho Hệ thống Quản lý Sáng kiến của UBND phường, gồm API CRUD đầy đủ kèm validation; tự kiểm thử trước khi bàn giao cho QA.",
+        "Đóng vai trò tester của dự án: viết 15-50 test cases mỗi dự án, kiểm thử trực tiếp trên môi trường gần production qua 10-15 màn hình mỗi dự án.",
+      ],
     },
     icon: backend,
     iconBg: "#333333",
-    date: { en: "Late 2023 - Present", vi: "Cuối 2023 - Hiện tại" },
+    date: { en: "Jun 2026 - Present", vi: "T6/2026 - Hiện tại" },
   },
   {
     en: {
-      title: "Full Stack Developer",
-      company_name: "Personal & Open Source Projects",
+      title: "Backend Developer (Freelance)",
+      company_name: "SME Clients (e.g. DanHoaBridal)",
+      description: [
+        "Delivered 2 production backend systems for SME clients (including the DanHoaBridal fashion business).",
+        "Converted complex ERDs into standardized SQL Server schemas with indexing strategies that noticeably improved query response times.",
+        "Built maintainable CRUD RESTful APIs and business logic with Java Spring Boot (MVC + Spring Data JPA); managed remote work, Git branching and merge conflicts over 10 months of development.",
+      ],
     },
     vi: {
-      title: "Lập trình viên Full Stack",
-      company_name: "Dự án Cá nhân & Mã nguồn mở",
+      title: "Backend Developer (Freelance)",
+      company_name: "Khách hàng Doanh nghiệp (VD: DanHoaBridal)",
+      description: [
+        "Bàn giao 2 hệ thống backend production cho khách hàng doanh nghiệp vừa và nhỏ (trong đó có hộ kinh doanh thời trang DanHoaBridal).",
+        "Chuyển đổi ERD phức tạp thành lược đồ SQL Server chuẩn hóa với chiến lược indexing cải thiện rõ rệt thời gian phản hồi truy vấn.",
+        "Xây dựng CRUD RESTful API và nghiệp vụ dễ bảo trì bằng Java Spring Boot (MVC + Spring Data JPA); làm việc từ xa với quy trình Git branching trong 10 tháng phát triển.",
+      ],
     },
-    icon: frontend,
+    icon: nodejs,
     iconBg: "#333333",
-    date: { en: "2024", vi: "2024" },
+    date: { en: "Nov 2025 - Mar 2026", vi: "T11/2025 - T3/2026" },
   },
   {
     en: {
       title: "Software Development Student",
-      company_name: "FPT Polytechnic College",
+      company_name: "FPT Polytechnic Can Tho College",
+      description: [
+        "Majoring in Software Development with focus on Java, Web Development and Database Design.",
+        "Participated in hackathons and technical projects, including the WEB AI HACKATHON 2026.",
+        "English: TOEIC 630, comfortable reading technical documentation.",
+      ],
     },
     vi: {
       title: "Sinh viên Phát triển Phần mềm",
-      company_name: "Trường Cao đẳng FPT Polytechnic",
+      company_name: "Cao đẳng FPT Polytechnic Cần Thơ",
+      description: [
+        "Chuyên ngành Phát triển Phần mềm, tập trung vào Java, Phát triển Web và Thiết kế CSDL.",
+        "Tham gia các cuộc thi hackathon và dự án kỹ thuật, trong đó có WEB AI HACKATHON 2026.",
+        "Tiếng Anh: TOEIC 630, đọc tốt tài liệu kỹ thuật.",
+      ],
     },
     icon: java,
     iconBg: "#333333",
-    date: { en: "Expected Graduation: 2026", vi: "Dự kiến tốt nghiệp: 2026" },
+    date: { en: "Aug 2024 - Present", vi: "T8/2024 - Hiện tại" },
   },
 ];
 
@@ -129,17 +165,18 @@ const projects = [
   {
     id: "project-2",
     en: {
-      name: "Revenue & Expenditure System",
-      description: "Comprehensive financial management system for enterprises. Digitizes budget management, contracts, and expense requests with multi-level approval workflows. Integrated with PulseOps for real-time performance monitoring.",
+      name: "TechCore: Financial Management",
+      description: "Enterprise finance management system with detailed RBAC role-based access and JWT-secured APIs. Handles safe budget allocation for concurrent transactions, avoiding data inconsistency. Deployed on a Linux VPS with Docker for the WEB AI HACKATHON 2026.",
     },
     vi: {
-      name: "Hệ thống Quản lý Thu chi",
-      description: "Hệ thống quản lý tài chính toàn diện cho doanh nghiệp. Số hóa quản lý ngân sách, hợp đồng và yêu cầu chi phí với quy trình phê duyệt đa cấp. Tích hợp PulseOps để giám sát hiệu năng thời gian thực.",
+      name: "TechCore: Quản lý Thu - Chi",
+      description: "Hệ thống quản lý tài chính doanh nghiệp với phân quyền RBAC chi tiết theo nhiều vai trò và API bảo mật bằng JWT. Xử lý logic phân bổ ngân sách an toàn cho giao dịch đồng thời, tránh sai lệch dữ liệu. Triển khai trên Linux VPS với Docker cho cuộc thi WEB AI HACKATHON 2026.",
     },
     tags: [
       { name: "springboot", color: "blue-text-gradient" },
-      { name: "nuxt3", color: "green-text-gradient" },
+      { name: "nuxtjs", color: "green-text-gradient" },
       { name: "sqlserver", color: "pink-text-gradient" },
+      { name: "docker", color: "blue-text-gradient" },
     ],
     image: revenue,
     source_code_link: "https://github.com/tranthuyngan2516",
@@ -148,17 +185,17 @@ const projects = [
   {
     id: "project-3",
     en: {
-      name: "TechCore Recruitment System",
-      description: "AI-powered recruitment platform that automates CV screening and interview scheduling. Integrates Google Gemini AI to extract candidate data and analyze skills, significantly reducing HR manual workload.",
+      name: "TechCore: Recruitment & HR",
+      description: "Recruitment and personnel management system built on a standardized SQL Server schema for high-volume candidate records. Covers the full pipeline from job posting to application intake with RESTful APIs, validation and automatic status updates.",
     },
     vi: {
-      name: "Hệ thống Tuyển dụng TechCore",
-      description: "Nền tảng tuyển dụng hỗ trợ bởi AI giúp tự động hóa việc sàng lọc CV và đặt lịch phỏng vấn. Tích hợp Google Gemini AI để trích xuất dữ liệu ứng viên và phân tích kỹ năng, giúp giảm đáng kể khối lượng công việc thủ công của HR.",
+      name: "TechCore: Tuyển dụng & Nhân sự",
+      description: "Hệ thống tuyển dụng và quản lý nhân sự với lược đồ SQL Server chuẩn hóa cho hồ sơ ứng viên khối lượng lớn. Triển khai trọn quy trình từ đăng tin tuyển dụng, nhận hồ sơ ứng tuyển đến tự động cập nhật trạng thái bằng API RESTful có validation.",
     },
     tags: [
-      { name: "java21", color: "blue-text-gradient" },
-      { name: "gemini-ai", color: "green-text-gradient" },
-      { name: "thymeleaf", color: "pink-text-gradient" },
+      { name: "springboot", color: "blue-text-gradient" },
+      { name: "sqlserver", color: "green-text-gradient" },
+      { name: "validation", color: "pink-text-gradient" },
     ],
     image: recruitment,
     source_code_link: "https://github.com/tranthuyngan2516",
@@ -167,17 +204,18 @@ const projects = [
   {
     id: "project-4",
     en: {
-      name: "Danhoa Bridal",
-      description: "Live e-commerce website for bridal clothing. Built with NuxtJS & Vue.js for SEO optimization and integrated with Firebase for real-time data handling. Currently serving real customers.",
+      name: "DanhoaBridal",
+      description: "Live fashion e-commerce backend. Models a multi-attribute product system (size, color, stock variants) with inventory tracking; integrates Firebase Storage for media and Nuxt.js SSR to improve catalog page load speed.",
     },
     vi: {
-      name: "Danhoa Bridal",
-      description: "Website thương mại điện tử thực tế cho cửa hàng váy cưới. Xây dựng bằng NuxtJS & Vue.js để tối ưu hóa SEO và tích hợp Firebase để xử lý dữ liệu thời gian thực. Hiện đang phục vụ khách hàng thực tế.",
+      name: "DanhoaBridal",
+      description: "Backend thương mại điện tử thời trang thực tế. Mô hình hóa hệ thống sản phẩm đa thuộc tính (biến thể theo size, color và tồn kho) kèm theo dõi tồn kho; tích hợp Firebase Storage lưu media và Nuxt.js SSR cải thiện tốc độ tải trang danh mục.",
     },
     tags: [
-      { name: "nuxtjs", color: "blue-text-gradient" },
-      { name: "vuejs", color: "green-text-gradient" },
+      { name: "springboot", color: "blue-text-gradient" },
+      { name: "nuxtjs-ssr", color: "green-text-gradient" },
       { name: "firebase", color: "pink-text-gradient" },
+      { name: "sqlserver", color: "blue-text-gradient" },
     ],
     image: danhoa,
     source_code_link: "https://github.com/tranthuyngan2516",
