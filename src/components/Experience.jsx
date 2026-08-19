@@ -24,7 +24,7 @@ const ExperienceCard = ({ experience, lang }) => (
     }}
     date={
       <div>
-        <h3 className="text-dim text-[18px] font-bold font-beckman">
+        <h3 className="text-dim text-[18px] font-bold font-montserrat">
           {experience.date[lang]}
         </h3>
       </div>
@@ -40,11 +40,11 @@ const ExperienceCard = ({ experience, lang }) => (
       </div>
     }>
     <div>
-      <h3 className="text-jetLight text-[24px] font-bold font-beckman tracking-[2px]">
+      <h3 className="text-jetLight text-[24px] font-bold font-montserrat tracking-[2px]">
         {experience[lang].title}
       </h3>
       <p
-        className="text-taupe text-[22px] font-semibold font-overcameBold tracking-[1px]"
+        className="text-taupe text-[22px] font-semibold font-montserrat tracking-[1px]"
         style={{ margin: 0 }}>
         {experience[lang].company_name}
       </p>
@@ -121,7 +121,7 @@ const Experience = () => {
             <button
               className="live-demo flex justify-between 
               sm:text-[18px] text-[14px] text-timberWolf 
-              font-bold font-beckman items-center py-5 pl-3 pr-3 
+              font-bold font-montserrat items-center py-5 pl-3 pr-3 
               whitespace-nowrap gap-1 sm:w-[148px] sm:h-[58px] 
               w-[125px] h-[46px] rounded-[10px] bg-jetLight 
               sm:mt-[22px] mt-[16px] hover:bg-battleGray 

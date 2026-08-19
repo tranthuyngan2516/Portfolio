@@ -57,7 +57,7 @@ const Navbar = () => {
                   key={nav.id}
                   className={`${
                     active === nav[lang] ? "text-french" : "text-eerieBlack"
-                  } hover:text-taupe text-[21px] font-medium font-mova uppercase tracking-[3px] cursor-pointer nav-links`}
+                  } hover:text-taupe text-[21px] font-medium font-poppins uppercase tracking-[3px] cursor-pointer nav-links`}
                 >
                   <button
                     onClick={() => handleSectionClick(nav[lang], nav.id)}
@@ -73,7 +73,7 @@ const Navbar = () => {
             <li>
               <Link
                 to="/cv"
-                className={`text-[21px] font-medium font-mova uppercase tracking-[3px]
+                className={`text-[21px] font-medium font-poppins uppercase tracking-[3px]
                   bg-gradient-to-r from-french to-taupe bg-clip-text text-transparent
                   hover:text-french transition-all duration-300`}
                 onClick={() => setActive("CV")}
@@ -142,7 +142,7 @@ const Navbar = () => {
                       key={nav.id}
                       className={`${
                         active === nav[lang] ? "text-french" : "text-eerieBlack"
-                      } text-[88px] font-bold font-arenq uppercase tracking-[1px] cursor-pointer`}
+                      } text-[88px] font-bold font-poppins uppercase tracking-[1px] cursor-pointer`}
                     >
                       <button
                         onClick={() => handleSectionClick(nav[lang], nav.id)}
@@ -155,7 +155,7 @@ const Navbar = () => {
                 })}
 
                 {/* CV Mobile Link Riêng */}
-                <li className="text-[88px] font-bold font-arenq uppercase tracking-[1px] text-french cursor-pointer">
+                <li className="text-[88px] font-bold font-poppins uppercase tracking-[1px] text-french cursor-pointer">
                   <Link
                     to="/cv"
                     onClick={() => {
